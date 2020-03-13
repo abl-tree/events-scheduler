@@ -10,4 +10,8 @@ class Event extends Model
         'date',
         'description'
     ];
+
+    public function setDescriptionAttribute($value) {
+        return ucfirst($value);
+    }
 }
