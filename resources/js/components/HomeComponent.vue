@@ -75,6 +75,7 @@
                         defaultView="listMonth" 
                         :plugins="calendarPlugins"
                         :events="events"
+                        @change="next"
                         allDayText="" />
                     </b-card-text>
                 </b-card>
@@ -167,6 +168,9 @@ import Swal from 'sweetalert2'
         let start = moment(info.start).format('YYYY-MM-DD')
         let end = moment(info.end).format('YYYY-MM-DD')
 
+        this.dateRange.startDate = start
+        this.dateRange.endDate = moment(info.end).subtract(1, "days").format('YYYY-MM-DD')
+
         axios.get('/api/event', {
             params: {
                 date: start
@@ -201,6 +205,10 @@ import Swal from 'sweetalert2'
             failureCallback(err)
         }) 
 
+      },
+      next() {
+          console.log('next');
+          
       },
       save(e) {    
         e.preventDefault()
