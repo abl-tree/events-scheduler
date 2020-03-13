@@ -12,6 +12,6 @@ class Event extends Model
     ];
 
     public function setDescriptionAttribute($value) {
-        return ucfirst($value);
+        $this->attributes['description'] = ucfirst($value);
     }
 }
