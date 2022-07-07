@@ -26,7 +26,7 @@
         "@fullcalendar/vue": "^4.4.0",
         "bootstrap": "^4.4.1",
         "bootstrap-vue": "^2.6.1",
-        "moment": "^2.24.0",
+        "moment": "^2.29.4",
         "sweetalert2": "^9.10.0",
         "vue": "^2.6.11",
         "vue2-daterange-picker": "^0.4.6"
